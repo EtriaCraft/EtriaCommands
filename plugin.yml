@@ -1,0 +1,169 @@
+name: EtriaCommands
+version: 1.3
+main: Main.EtriaCommands
+commands:
+  back:
+    usage: /back
+    aliases: [return]
+  isbanned:
+    usage: /isbanned [player]
+  mute:
+    usage: /mute (player)
+  kick:
+    usage: /kick [player] (message)
+  ban:
+    usage: /ban [confirm|cancel|player] (message)
+  unban:
+    usage: /unban (player)
+  god:
+    usage: /god [player]
+    aliases: [jesus]
+  ping:
+    usage: /<command>
+  hat:
+    usage: /hat
+  backpack:
+    usage: /backpack
+    aliases: [bp, pack]
+  home:
+    usage: /home (home)
+  sethome:
+    usage: /sethome (home)
+  listhomes:
+    usage: /listhomes (player)
+    aliases: [homes]
+  deletehome:
+    usage: /deletehome (home)
+    aliases: [delhome]
+  clear:
+    usage: /clear (player)
+    aliases: [clearinventory]
+  copyinv:
+    usage: /copyinv (player)
+  clearitem:
+    usage: /clearitem [id(:amnt)(:meta)] (player)
+  item:
+    usage: /item [item] [#]
+    aliases: [i]
+  iteminfo:
+    usage: /iteminfo
+    aliases: [itemid]
+  help:
+    usage: /help <page>
+    aliases: [h]
+  msg:
+    usage: /msg [player] [message]
+    aliases: [m, pm, tell, whisper]
+  reply:
+    usage: /reply [message]
+    aliases: [r]
+  garbagecollector:
+    usage: /<command>
+    aliases: [gc, garbage]
+  getpos:
+    usage: /getpos
+  trade:
+    description: Trades between players, does a lot.
+    usage: /trade 
+  tp:
+    usage: /tp [[(player)]|[[x] [y] [z] (world)]]
+    aliases: [tppos]
+  tpa:
+    usage: /tpa [[player]|[decline [player]]|[accept (player)]]
+    aliases: [call, tpr]
+  tphere:
+    usage: /tphere [player]
+    aliases: [bring, summon]
+  spawn:
+    usage: /spawn
+  vanish:
+    usage: /vanish (player)
+    aliases: [poof, va]
+  time:
+    usage: /time [time]
+  weather:
+    usage: /weather [on|off]
+  setspawn:
+    usage: /setspawn
+  warp:
+    usage: /warp <name>
+  setwarp:
+    usage: /setwarp <name>
+  deletewarp:
+    usage: /deletewarp <name>
+    aliases: [delwarp]
+  enchant:
+    usage: /enchant
+  repair:
+    usage: /repair
+  gamemode:
+    usage: /gamemode <player>
+    aliases: [gm]
+  heal:
+    usage: /heal <player>
+    aliases: [regen]
+  workbench:
+    usage: /workbench
+    aliases: [wb, bench]
+  enchantingtable:
+    usage: /enchantingtable
+    aliases: [et, enchant, etable]
+  shoot:
+    usage: /shoot [player]
+permissions:
+  ec.admin:
+    default: false
+    children:
+      ec.backpack: true
+      ec.backpack.size.6: true
+      ec.backpack.protected: true
+      ec.backpack.other: true
+      ec.time: true
+      ec.setspawn: true
+      ec.weather: true
+      ec.workbench: true
+      ec.enchantingtable: true
+      ec.garbagecollector: true
+      ec.ping: true
+      ec.help: true
+      ec.saveexp: true
+      ec.saveitems: true
+      ec.shoot: true
+      ec.gamemode: true
+      ec.getpos: true
+      ec.hat: true
+      ec.heal: true
+      ec.trade: true
+      ec.tp: true
+      ec.tpa: true
+      ec.tpa.answer: true
+      ec.tphere: true
+      ec.spawn: true
+      ec.warp: true
+      ec.setwarp: true
+      ec.deletewarp: true
+      ec.vanish: true
+      ec.vanish.seehidden: true
+      ec.vanish.alert: true
+      ec.home: true
+      ec.sethome: true
+      ec.sethome.named: true
+      ec.deletehomes: true
+      ec.listhomes: true
+      ec.clear: true
+      ec.clearitem: true
+      ec.copyinv: true
+      ec.enchant: true
+      ec.item: true
+      ec.iteminfo: true
+      ec.repair: true
+      ec.color: true
+      ec.msg: true
+      ec.reply: true  
+      ec.ban: true
+      ec.ban.exempt: true
+      ec.ban.override: true
+      ec.isbanned: true
+      ec.kick: true
+      ec.mute: true
+      ec.unban: true
