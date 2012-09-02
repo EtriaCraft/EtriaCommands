@@ -1,26 +1,4 @@
-v1.2:
-- Starting to keep changes in this file now :)
-- Fixed Reply bug that was created in 1.1.
-- New Command: EnchantingTable
-- New Command: Help
-- New Command: Trade
-- New Command: GarbageCollector
-v1.3
-- New Command: Shoot
-- Rewrote Backpack Class Completely
-- Removed Listener for Backpack, it's all in the backpack class now.
-- Backpack permissions for size (ec.backpack.size.ROW#) (Max 6)
-- Backpack permission for snooping (ec.backpack.others)
-- Backpack Permission for saving on death (ec.backpack.protected)
-- Fixed a bug where backpack could clear itself.
-- Added Command: /back (Alias: return)
-- Now Requires Vault
-- Handles Chat Formatting
-- New Permission Node (ec.chat.color) Allows for coloring messages.
-- New Configuration Option for Handling Chat Formatting.
-- Fixed Unban Message (Now has color)
-- Added Exempt Permission Nodes for bans
--- ec.ban.exempt
--- ec.ban.override
-- Added a Global Homes limit for Ops, you can also specify specific home limits with permissions :D
--- ec.sethome.limit.#
+v1.4:
+- Fixed messages with homes limits.
+- Added named homes to Admin permissions.
+- Cleaned up the Home Commands code. That's all of the Cmpts broken up now :)

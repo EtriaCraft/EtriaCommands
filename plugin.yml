@@ -1,5 +1,5 @@
 name: EtriaCommands
-version: 1.3
+version: 1.4-DEV
 main: Main.EtriaCommands
 commands:
   back:
@@ -148,6 +148,7 @@ permissions:
       ec.home: true
       ec.sethome: true
       ec.sethome.named: true
+      ec.home.named: true
       ec.deletehomes: true
       ec.listhomes: true
       ec.clear: true

@@ -76,8 +76,8 @@ public class EtriaCommands extends JavaPlugin {
         commands.registerCommands(new BackpackCmd().getClass());
         commands.registerCommands(new BanCmd().getClass());
         commands.registerCommands(new ClearCmd().getClass());
-        commands.registerCommands(new CmptHomes().getClass());
         commands.registerCommands(new CopyinvCmd().getClass());
+        commands.registerCommands(new DeletehomeCmd().getClass());
         commands.registerCommands(new DeletewarpCmd().getClass());
         commands.registerCommands(new EnchantCmd().getClass());
         commands.registerCommands(new EnchantingTableCmd().getClass());
@@ -88,15 +88,18 @@ public class EtriaCommands extends JavaPlugin {
         commands.registerCommands(new HatCmd().getClass());
         commands.registerCommands(new HealCmd().getClass());
         commands.registerCommands(new HelpCmd().getClass());
+        commands.registerCommands(new HomeCmd().getClass());
         commands.registerCommands(new IsbannedCmd().getClass());
         commands.registerCommands(new ItemCmd().getClass());
         commands.registerCommands(new IteminfoCmd().getClass());
         commands.registerCommands(new KickCmd().getClass());
+        commands.registerCommands(new ListhomesCmd().getClass());
         commands.registerCommands(new MsgCmd().getClass());
         commands.registerCommands(new MuteCmd().getClass());
         commands.registerCommands(new PingCmd().getClass());
         commands.registerCommands(new RepairCmd().getClass());
         commands.registerCommands(new ReplyCmd().getClass());
+        commands.registerCommands(new SethomeCmd().getClass());
         commands.registerCommands(new SetspawnCmd().getClass());
         commands.registerCommands(new SetwarpCmd().getClass());
         commands.registerCommands(new ShootCmd().getClass());
