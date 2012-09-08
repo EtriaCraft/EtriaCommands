@@ -20,9 +20,6 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 public class PlayerListener implements Listener {
-    
-	public HashMap<String, ItemStack[]> deathinventory = new HashMap<String, ItemStack[]>();
-	public HashMap<String, ItemStack[]> deatharmor = new HashMap<String, ItemStack[]>();
 	
     @EventHandler
     public void onPlayerChat(AsyncPlayerChatEvent e) {
@@ -60,29 +57,6 @@ public class PlayerListener implements Listener {
     @EventHandler
     public void onPlayerPickupItem(PlayerPickupItemEvent e) {
         if (VanishCmd.isVanished(e.getPlayer())) e.setCancelled(true);
-    }
-    
-    @EventHandler
-    public void onPlayerDeathEvent(PlayerDeathEvent e) {
-    	if (e.getEntity().hasPermission("ec.saveitems")) {
-    		deathinventory.put(e.getEntity().getName(), e.getEntity().getInventory().getContents());
-    		deatharmor.put(e.getEntity().getName(), e.getEntity().getInventory().getArmorContents());
-    		e.getDrops().clear();
-    	}
-    	
-    	if (e.getEntity().hasPermission("ec.saveexp")) {
-    		e.setKeepLevel(true);
-    		e.setDroppedExp(0);
-    	}
-    }
-    
-    @EventHandler
-    public void onPlayerRespawn(PlayerRespawnEvent e) {
-    	if (!deathinventory.containsKey(e.getPlayer().getName())) return;
-    	e.getPlayer().getInventory().setContents(deathinventory.get(e.getPlayer().getName()));
-    	e.getPlayer().getInventory().setArmorContents(deatharmor.get(e.getPlayer().getName()));
-    	deathinventory.remove(e.getPlayer().getName());
-    	deatharmor.remove(e.getPlayer().getName());
     }
     
 }

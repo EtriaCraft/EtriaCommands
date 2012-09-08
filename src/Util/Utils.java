@@ -10,14 +10,6 @@ import org.bukkit.inventory.ItemStack;
 public final class Utils {
     
     public static final Logger log = Logger.getLogger("Minecraft");
-
-    public static String getFormat(Player p, String format) {
-    	return format.replace("<prefix>", ChatProv.sp.getPlayerPrefix(p)).replace("<name>", p.getName());
-    }
-    
-    public static String colorize(String message) {
-    	return message.replaceAll("(?i)&([a-fk-or0-9])", "\u00A7$1");
-    }
     
     public static ItemStack parseItemStack(String str) {
         String name, data = "0", quan = "1";

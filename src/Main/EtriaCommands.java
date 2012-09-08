@@ -7,7 +7,6 @@ import Listeners.EntityListener;
 import Listeners.InventoryListener;
 import Listeners.PlayerListener;
 import Listeners.TradeInventoryListener;
-import Util.ChatProv;
 import Util.CommandHandleException;
 import Util.CommandManager;
 import Util.Utils;
@@ -22,7 +21,6 @@ public class EtriaCommands extends JavaPlugin {
     Config config;
     DBConnection dbc;
     TradeCmd trade;
-    ChatProv cp;
     
     private CommandManager commands;
 	public static File dataFolder;
@@ -69,8 +67,6 @@ public class EtriaCommands extends JavaPlugin {
         this.getServer().getPluginManager().registerEvents(new InventoryListener(), this);
         this.getServer().getPluginManager().registerEvents(new EntityListener(), this);
         this.getServer().getPluginManager().registerEvents(new TradeInventoryListener(), this);
-        
-        cp = new ChatProv(this);
         
         commands.registerCommands(new BackCmd().getClass());
         commands.registerCommands(new BackpackCmd().getClass());

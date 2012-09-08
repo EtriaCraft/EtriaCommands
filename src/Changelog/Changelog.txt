@@ -2,3 +2,6 @@ v1.4:
 - Fixed messages with homes limits.
 - Added named homes to Admin permissions.
 - Cleaned up the Home Commands code. That's all of the Cmpts broken up now :)
+- ItemSave and SaveEXP now a part of EtriaUtilities.
+- Added back to the ec.admin permission node
+- Chat Management / Colorization now handled by EtriaUtilities

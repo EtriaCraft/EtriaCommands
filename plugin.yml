@@ -114,6 +114,7 @@ permissions:
   ec.admin:
     default: false
     children:
+      ec.back: true
       ec.backpack: true
       ec.backpack.size.6: true
       ec.backpack.protected: true
@@ -126,8 +127,6 @@ permissions:
       ec.garbagecollector: true
       ec.ping: true
       ec.help: true
-      ec.saveexp: true
-      ec.saveitems: true
       ec.shoot: true
       ec.gamemode: true
       ec.getpos: true
