@@ -159,6 +159,7 @@ permissions:
       ec.repair: true
       ec.color: true
       ec.msg: true
+      ec.msg.spy: true
       ec.reply: true  
       ec.ban: true
       ec.ban.exempt: true

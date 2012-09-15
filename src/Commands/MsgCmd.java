@@ -27,6 +27,12 @@ public class MsgCmd {
 
         chatterDb.put(s, r);
         chatterDb.put(r, s);
-        return true;
+        
+        for(Player player: Bukkit.getOnlinePlayers()) {
+    		if ((player.hasPermission("ec.msg.spy"))) {
+            	player.sendMessage("§3[Spy]§a[§7" + s.getName() + "§a -> §7" + r.getName() + "§a] §e" + message);
+            }
+    }
+    return true;
     }
 }

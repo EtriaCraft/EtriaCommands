@@ -2,6 +2,7 @@ package Commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 import Main.Strings;
 import Util.CommandHandle;
@@ -27,8 +28,16 @@ public class ReplyCmd {
             Utils.log.info(String.format("[PM][%1$s -> %2$s] %3$s", s.getName(), r.getName(),  message));
             
             MsgCmd.chatterDb.put(r, s);
+            
+            for(Player player: Bukkit.getOnlinePlayers()) {
+        		if ((player.hasPermission("ec.msg.spy"))) {
+                	player.sendMessage("§3[Spy]§a[§7" + s.getName() + "§a -> §7" + r.getName() + "§a] §e" + message);
+                }
         }
         return true;
+        
+    }
+		return false;
     }
     
 }
