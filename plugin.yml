@@ -128,6 +128,7 @@ permissions:
       ec.ping: true
       ec.help: true
       ec.shoot: true
+      ec.god: true
       ec.gamemode: true
       ec.getpos: true
       ec.hat: true

@@ -87,7 +87,7 @@ public class TradeSession {
 					targ.getInventory().addItem(is);
 				}
 			}
-		}, 5L);
+		}, 10L);
 		init.sendMessage("§cTrade aborted");
 		targ.sendMessage("§cTrade aborted");
 		terminate();
@@ -137,7 +137,7 @@ public class TradeSession {
 				abort();
 			}
 			
-		}, 300L);
+		}, 600L);
 	}
 	
 	private void unscheduleTradeCancel() {
