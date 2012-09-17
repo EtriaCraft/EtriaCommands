@@ -101,6 +101,7 @@ public class EtriaCommands extends JavaPlugin {
         commands.registerCommands(new SetwarpCmd().getClass());
         commands.registerCommands(new ShootCmd().getClass());
         commands.registerCommands(new SpawnCmd().getClass());
+        commands.registerCommands(new SpawnmobCmd().getClass());
         commands.registerCommands(new TimeCmd().getClass());
         commands.registerCommands(new tpCmd().getClass());
         commands.registerCommands(new tpaCmd().getClass());

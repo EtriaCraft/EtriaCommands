@@ -30,6 +30,8 @@ commands:
     aliases: [bp, pack]
   home:
     usage: /home (home)
+  spawnmob:
+    usage: /spawnmob [mob]
   sethome:
     usage: /sethome (home)
   listhomes:
@@ -43,6 +45,9 @@ commands:
     aliases: [clearinventory]
   copyinv:
     usage: /copyinv (player)
+  chunkfix:
+    usage: /<command>
+    aliases: [fixchunk]
   clearitem:
     usage: /clearitem [id(:amnt)(:meta)] (player)
   item:
@@ -125,7 +130,9 @@ permissions:
       ec.calculator: true
       ec.time: true
       ec.setspawn: true
+      ec.spawnmob: true
       ec.weather: true
+      ec.chunkfix: true
       ec.workbench: true
       ec.enchantingtable: true
       ec.garbagecollector: true
