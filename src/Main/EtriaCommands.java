@@ -73,6 +73,7 @@ public class EtriaCommands extends JavaPlugin {
         commands.registerCommands(new BanCmd().getClass());
         commands.registerCommands(new CalculatorCmd().getClass());
         commands.registerCommands(new ClearCmd().getClass());
+        commands.registerCommands(new ChunkfixCmd().getClass());
         commands.registerCommands(new CopyinvCmd().getClass());
         commands.registerCommands(new DeletehomeCmd().getClass());
         commands.registerCommands(new DeletewarpCmd().getClass());
@@ -116,7 +117,7 @@ public class EtriaCommands extends JavaPlugin {
     
     public void onDisable() {
         DBConnection.sql.close();
-        BackpackCmd.sql.close();
+        BackpackCmd.shutdown();
     }
     
     @Override

@@ -254,4 +254,17 @@ public class BackpackCmd implements Listener {
 			}
 		}
 	}
+	
+	public static void shutdown() {
+		for (Player p : Bukkit.getOnlinePlayers()) {
+			if (backpackusers.contains(p.getName())) {
+				if (p.getOpenInventory().getTitle().equalsIgnoreCase("Satchel")
+					|| p.getOpenInventory().getTitle().equalsIgnoreCase("Backpack")) {
+						closePack(p.getName(), p.getOpenInventory().getTopInventory());
+						p.closeInventory();
+					}
+			}
+		}
+		sql.close();
+	}
 }
