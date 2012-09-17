@@ -35,7 +35,7 @@ public class SethomeCmd {
         if (!HomeCmd.homesDb.containsKey(player)) HomeCmd.homesDb.put(player, new ArrayList());
         
         final int limit = HomeCmd.getPlayerHomeLimit(s);
-        if (HomeCmd.homesDb.get(player).size() >= limit) {
+        if (HomeCmd.homesDb.get(player) != null && HomeCmd.homesDb.get(player).size() >= limit) {
         	s.sendMessage("§cYou have already reached your limit of §e" + limit + " §chomes.");
         	return true;
         }
