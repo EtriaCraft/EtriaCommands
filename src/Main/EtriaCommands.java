@@ -79,6 +79,8 @@ public class EtriaCommands extends JavaPlugin {
         commands.registerCommands(new DeletewarpCmd().getClass());
         commands.registerCommands(new EnchantCmd().getClass());
         commands.registerCommands(new EnchantingTableCmd().getClass());
+        commands.registerCommands(new FlyCmd().getClass());
+        commands.registerCommands(new FlyspeedCmd().getClass());
         commands.registerCommands(new GamemodeCmd().getClass());
         commands.registerCommands(new GarbageCollectorCmd().getClass());
         commands.registerCommands(new GetposCmd().getClass());

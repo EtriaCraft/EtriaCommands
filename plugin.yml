@@ -37,6 +37,9 @@ commands:
   listhomes:
     usage: /listhomes (player)
     aliases: [homes]
+  fly:
+    usage: /fly
+    aliases: [birdmode]
   deletehome:
     usage: /deletehome (home)
     aliases: [delhome]
@@ -110,6 +113,9 @@ commands:
   heal:
     usage: /heal <player>
     aliases: [regen]
+  flyspeed:
+    usage: /<command> [speed]
+    aliases: [fspeed, fs]
   workbench:
     usage: /workbench
     aliases: [wb, bench]
@@ -165,6 +171,8 @@ permissions:
       ec.clear: true
       ec.clearitem: true
       ec.copyinv: true
+      ec.fly: true
+      ec.flyspeed: true
       ec.enchant: true
       ec.item: true
       ec.iteminfo: true
