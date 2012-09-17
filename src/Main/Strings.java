@@ -8,6 +8,7 @@ public enum Strings {
     NO_PERMISSION("§cYou do not have permission to do that!"),
     INVALID_ARGUMENTS("§cInvalid arguments"),
     NOT_ENOUGH_ARGS("§cNot enough arguments"),
+    TOO_MANY_ARGS("§cToo many arguments"),
     PLAYER_OFFLINE("§cPlayer is not online!");
     
     private static String[] RVALS = {"M", "CM", "D", "CD", "C", "XC", "L",

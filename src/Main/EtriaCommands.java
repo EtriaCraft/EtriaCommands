@@ -71,6 +71,7 @@ public class EtriaCommands extends JavaPlugin {
         commands.registerCommands(new BackCmd().getClass());
         commands.registerCommands(new BackpackCmd().getClass());
         commands.registerCommands(new BanCmd().getClass());
+        commands.registerCommands(new CalculatorCmd().getClass());
         commands.registerCommands(new ClearCmd().getClass());
         commands.registerCommands(new CopyinvCmd().getClass());
         commands.registerCommands(new DeletehomeCmd().getClass());

@@ -17,7 +17,7 @@ public class ShootCmd {
 			return true;
 		}
 		Utils.serverBroadcast("§2" + s.getName() + "§4 has shot " + "§2" + victim.getName() + "§4. <3!", null);
-		return false;
+		return true;
 	}
 	
 }
