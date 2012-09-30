@@ -29,24 +29,6 @@ public class EtriaCommands extends JavaPlugin {
 	
 	public MetricsLite ml = null;
 	
-    
-    // Configuration Load //
-    public void loadConfiguration() {
-    	if (!new File(getDataFolder() + File.separator + "config.yml").exists())
-    		saveDefaultConfig();
-    	File file = new File(getDataFolder() + File.separator + "playerdata" + File.separator);
-    	boolean exists = file.exists();
-    	if (!exists) {
-    		try {
-    			boolean success = new File(getDataFolder() + File.separator + "playerdata").mkdir();
-    			if (success) Utils.log.info("[EtriaCommands] Created playerdata folder.");
-    		} catch (Exception e) {
-    			Utils.log.severe("[EtriaCommands] Failed to make userdata directory!");
-    			Utils.log.severe(e.getMessage());
-    		}
-    	}
-    }
-	
     @Override
     public void onEnable() {
     	
