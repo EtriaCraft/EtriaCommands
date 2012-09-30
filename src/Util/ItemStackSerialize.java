@@ -9,7 +9,7 @@ import org.bukkit.inventory.ItemStack;
 public class ItemStackSerialize {
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public static List toMapList(ItemStack[] iss) {
+	public static List serialize(ItemStack[] iss) {
 		final ArrayList<Map<String, Object>> list = new ArrayList();
 		for (int i = 0; i < iss.length; i++) {
 			final ItemStack is = iss[i];
@@ -19,7 +19,7 @@ public class ItemStackSerialize {
 	}
 	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public static ItemStack[] fromMapList(List list) {
+	public static ItemStack[] deserialize(List list) {
 		final ItemStack[] iss = new ItemStack[list.size()];
 		for (int i = 0; i < list.size(); i++) {
 			iss [i] = ItemStack.deserialize((Map<String, Object>) list.get(i));

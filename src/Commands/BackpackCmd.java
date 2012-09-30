@@ -79,7 +79,7 @@ public class BackpackCmd implements Listener {
 				ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(buf));
 				Object o = ois.readObject();
 				
-				ItemStack[] iss = ItemStackSerialize.fromMapList((List) o);
+				ItemStack[] iss = ItemStackSerialize.deserialize((List) o);
 				
 				backpacks.put(player, iss);
 			}
@@ -96,7 +96,7 @@ public class BackpackCmd implements Listener {
 	// Saves backpacks
 	private static void updatePack(String player, ItemStack[] iss) {
 		backpacks.put(player, iss);
-		List<Map<String, Object>> list = ItemStackSerialize.toMapList(iss);
+		List<Map<String, Object>> list = ItemStackSerialize.serialize(iss);
 		
 		writeToDb(list, player);
 		
