@@ -2,6 +2,7 @@ package Listeners;
 
 import java.util.HashMap;
 
+import Commands.BackCmd;
 import Commands.VanishCmd;
 import Commands.MuteCmd;
 import org.bukkit.Bukkit;
@@ -59,4 +60,8 @@ public class PlayerListener implements Listener {
         if (VanishCmd.isVanished(e.getPlayer())) e.setCancelled(true);
     }
     
+    @EventHandler
+    public void onPlayerDeath(PlayerDeathEvent e) {
+    	BackCmd.backDb.put(e.getEntity().getName(), e.getEntity().getLocation());
+    }
 }
