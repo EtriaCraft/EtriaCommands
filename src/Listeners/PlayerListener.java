@@ -1,13 +1,16 @@
 package Listeners;
 
-import java.util.HashMap;
-
 import Commands.BackCmd;
+import Commands.MotdCmd;
 import Commands.VanishCmd;
 import Commands.MuteCmd;
+import Main.Config;
+import Util.Utils;
+
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Chest;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
@@ -16,9 +19,7 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerPickupItemEvent;
-import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
 
 public class PlayerListener implements Listener {
 	
@@ -38,8 +39,10 @@ public class PlayerListener implements Listener {
             VanishCmd.setVanished(e.getPlayer(), true);
             e.getPlayer().sendMessage("§aYou logged in vanished!");
         }
+        
+        MotdCmd.motd(e.getPlayer(), null);
     }
-    
+
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent e) {
         if (e.getAction().equals(Action.LEFT_CLICK_AIR) || e.getAction().equals(Action.RIGHT_CLICK_AIR)) return;

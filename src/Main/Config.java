@@ -1,12 +1,12 @@
 package Main;
 
+import java.util.List;
 import org.bukkit.configuration.Configuration;
 
 public final class Config {
 
     public static Configuration config;
     
-    // MySQL
     public static String SQL_ENGINE;
     public static String SQLITE_DB;
     public static String MYSQL_HOST;
@@ -14,8 +14,9 @@ public final class Config {
     public static String MYSQL_USER;
     public static String MYSQL_PASS;
     public static String MYSQL_DB;
-    
-    // Homes
+    // 
+    public static List<String> MOTD;
+    //
     public static int GLOBAL_MAX_HOMES;
     
     public Config(EtriaCommands instance) {
@@ -27,6 +28,13 @@ public final class Config {
         config.set("SQL.MYSQL.USER", MYSQL_USER = config.getString("SQL.MYSQL.USER", "user"));
         config.set("SQL.MYSQL.PASS", MYSQL_PASS = config.getString("SQL.MYSQL.PASS", "pass"));
         config.set("SQL.MYSQL.DB", MYSQL_DB = config.getString("SQL.MYSQL.DB", "database"));
+        //
+        if (!config.contains("MOTD")) {
+            final String[] def_motd = {"Hey!", "What's up?"};
+            config.set("MOTD", def_motd);
+        }
+        MOTD = config.getStringList("MOTD");
+        //
         config.set("Homes.Global Homes Limit", GLOBAL_MAX_HOMES = config.getInt("Homes.Global_Homes_Limit", 300));
         instance.saveConfig();
     }

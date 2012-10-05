@@ -76,6 +76,7 @@ public class EtriaCommands extends JavaPlugin {
         commands.registerCommands(new IteminfoCmd().getClass());
         commands.registerCommands(new KickCmd().getClass());
         commands.registerCommands(new ListhomesCmd().getClass());
+        commands.registerCommands(new MotdCmd().getClass());
         commands.registerCommands(new MsgCmd().getClass());
         commands.registerCommands(new MuteCmd().getClass());
         commands.registerCommands(new PingCmd().getClass());

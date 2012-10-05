@@ -7,6 +7,8 @@ commands:
     aliases: [return]
   isbanned:
     usage: /isbanned [player]
+  motd:
+    usage: /<command>
   mute:
     usage: /mute (player)
   kick:
@@ -174,6 +176,7 @@ permissions:
       ec.fly: true
       ec.flyspeed: true
       ec.enchant: true
+      ec.motd: true
       ec.item: true
       ec.iteminfo: true
       ec.repair: true
