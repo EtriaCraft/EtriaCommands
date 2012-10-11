@@ -18,6 +18,8 @@ public final class Config {
     public static List<String> MOTD;
     //
     public static int GLOBAL_MAX_HOMES;
+    //
+    public static Boolean Trade_Cross_World;
     
     public Config(EtriaCommands instance) {
         config = instance.getConfig();
@@ -28,6 +30,7 @@ public final class Config {
         config.set("SQL.MYSQL.USER", MYSQL_USER = config.getString("SQL.MYSQL.USER", "user"));
         config.set("SQL.MYSQL.PASS", MYSQL_PASS = config.getString("SQL.MYSQL.PASS", "pass"));
         config.set("SQL.MYSQL.DB", MYSQL_DB = config.getString("SQL.MYSQL.DB", "database"));
+        config.set("Trade", Trade_Cross_World = config.getBoolean("Trade", false));
         //
         if (!config.contains("MOTD")) {
             final String[] def_motd = {"Hey!", "What's up?"};

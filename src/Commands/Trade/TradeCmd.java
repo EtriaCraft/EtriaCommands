@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import Main.Config;
 import Util.CommandHandle;
 
 import org.bukkit.Bukkit;
@@ -87,6 +88,9 @@ public class TradeCmd {
             } else if (traderequests.containsKey(p)) {
                 p.sendMessage("§cYou can't send a request until you deal with your current");
                 return true;
+            } else if (!p.getWorld().equals(o.getWorld()) && Config.Trade_Cross_World != true) {
+            	p.sendMessage("§eThat player is in a different world, you can't trade with them");
+            	return true;
             }
             
             //We can continue
