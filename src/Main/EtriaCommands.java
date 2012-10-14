@@ -53,9 +53,12 @@ public class EtriaCommands extends JavaPlugin {
         commands.registerCommands(new BackCmd().getClass());
         commands.registerCommands(new BackpackCmd().getClass());
         commands.registerCommands(new BanCmd().getClass());
+        commands.registerCommands(new BlindCmd().getClass());
         commands.registerCommands(new CalculatorCmd().getClass());
         commands.registerCommands(new ClearCmd().getClass());
         commands.registerCommands(new ChunkfixCmd().getClass());
+        commands.registerCommands(new CoinCmd().getClass());
+        commands.registerCommands(new ConfuseCmd().getClass());
         commands.registerCommands(new CopyinvCmd().getClass());
         commands.registerCommands(new DeletehomeCmd().getClass());
         commands.registerCommands(new DeletewarpCmd().getClass());
@@ -82,6 +85,7 @@ public class EtriaCommands extends JavaPlugin {
         commands.registerCommands(new PingCmd().getClass());
         commands.registerCommands(new RepairCmd().getClass());
         commands.registerCommands(new ReplyCmd().getClass());
+        commands.registerCommands(new rollCmd().getClass());
         commands.registerCommands(new SethomeCmd().getClass());
         commands.registerCommands(new SetspawnCmd().getClass());
         commands.registerCommands(new SetwarpCmd().getClass());
